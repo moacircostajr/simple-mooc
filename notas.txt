@@ -5,3 +5,5 @@
 (venv) moacir@Moacirs-Mac-mini app % python manage.py runserver
 
 (venv) moacir@Moacirs-Mac-mini app % python manage.py shell
+
+(venv) moacir@Moacirs-Mac-mini app % python manage.py syncdb
