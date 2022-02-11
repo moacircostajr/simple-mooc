@@ -5,5 +5,10 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'home.html', {'usuario': 'Fulano de Tal'})
+    return render(request, 'home.html')
+    # return render(request, 'home.html', {'usuario': 'Fulano de Tal'})
     # return HttpResponse('Hello World')
+
+
+def contact(request):
+    return render(request, 'contact.html')
