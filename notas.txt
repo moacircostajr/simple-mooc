@@ -1,0 +1,3 @@
+(venv) moacir@Moacirs-Mac-mini app % python manage.py startproject app
+
+(venv) moacir@Moacirs-Mac-mini app % python manage.py startapp core
