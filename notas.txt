@@ -7,3 +7,23 @@
 (venv) moacir@Moacirs-Mac-mini app % python manage.py shell
 
 (venv) moacir@Moacirs-Mac-mini app % python manage.py syncdb
+
+$ pip install -r requirements-dev.txt
+
+(venv) moacir@Moacirs-Mac-mini app % python manage.py sqlall courses
+
+# FILTERING
+
+# https://docs.djangoproject.com/en/3.2/ref/models/querysets/
+
+courses = Course.objects.all()
+
+courses = Course.objects.filter(slug='django')
+
+courses = Course.objects.filter(slug='django').first()
+
+courses = Course.objects.filter(slug='django').filter(name='Python')
+
+courses = Course.objects.filter(name__icontains='Python')
+
+courses = Course.objects.filter(name__iexact='DJANGO')
