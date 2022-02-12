@@ -19,13 +19,19 @@
                             <h4 class="content-subhead">{{ course.name }}</h4>
                             <h3>Data de início: {{ course.start_date }}</h3>
                             <p>
-                                {{ course.description }}
+                                {{ course.description|linebreaks }}
                             </p>
                         </div>
                     </div>
                     <div class="pure-u-1-3">
                         <div class="l-box">
-                            <img src="http://placehold.it/400x250" alt="{{course.name}}">
+                            <a href="">
+                                {% if course.image %}
+                                <img src="{{ course.image.url }}" alt="{{course.name}}">
+                                {% else %}
+                                <img src="http://placehold.it/400x250" alt="{{course.name}}">
+                                {% endif %}
+                            </a>
                         </div>
                     </div>
                 </div>
